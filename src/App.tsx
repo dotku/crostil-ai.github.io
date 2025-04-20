@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Notebook as Robot,
   Code2,
@@ -14,11 +15,13 @@ import {
   GraduationCap,
   ArrowRight,
 } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Hero Section */}
+      <Analytics />
       <header className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -55,6 +58,13 @@ function App() {
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
+              <Link
+                to="/register"
+                className="group inline-flex items-center px-6 py-3 rounded-lg bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 font-semibold transition-colors"
+              >
+                Register
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </div>
